@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="img/popbubble.png" type="image/x-icon">
+</head>
+
+<body>
+  <main data-main="main">
+    <img width="200px" src="img/popbubble.png" alt="">
+    <section class="menu">
+      <div>
+      </div>
+      <div class="contagem-regressiva">
+        <h1 data-js="score" class="score">SCORE</h1>
+        <h1>tempo <span data-contagem="contagem" style="color:red;"></span> </h1>
+      </div>
+      <div class="velocidade">
+        <h3>Speed: 1 bolha a cada
+          <span data-speed="velocidade" value="1000" style="color:red;">1.0</span>
+          segundos
+          <button data-btn-speed="aumentar">+</button>
+          <button data-btn-speed="diminuir">-</button>
+        </h3>
+      </div>
+      <div class="timer">
+        <h3>timer:
+          <span data-timer="timer" style="color:red;">30</span>
+          segundos
+        </h3>
+        <button data-btn-timer="aumentar">+</button>
+        <button data-btn-timer="diminuir">-</button>
+      </div>
+      <div class="butoes-principais">
+        <div data-js="butao-iniciar" class="butao-iniciar">
+          <button>Iniciar</button>
+        </div>
+        <div data-js="butao-historico" class="butao-iniciar">
+          <button>Historico</button>
+        </div>
+      </div>
+    </section>
+
+    <section data-js="jogo-area" class="jogo-area">
+    </section>
+    <section data-js="modal" class="modal-screen hidden">
+      <ul data-lista="historico">
+        <h2 data-lista="title">Clique em qualquer lugar para sair</h2> <br>
+      </ul>
+    </section>
+  </main>
+  <script src="main.js"></script>
+</body>
+
+</html>

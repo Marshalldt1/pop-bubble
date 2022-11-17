@@ -1,0 +1,134 @@
+*{
+  margin: 0;padding: 0;
+}
+
+
+main {
+  background-color: aqua;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.jogo-area {
+  position: relative;
+  border: red 1px solid;
+  width: 500px;
+  height: 400px;
+}
+.bolhinha {
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.39);
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  animation-name: nascer;
+  animation-duration: 0.2s;
+}
+@keyframes nascer {
+  from {
+    width: 1px;
+    height: 1px;
+  }
+  to {
+    width: 30px;
+    height: 30px;
+  }
+}
+.butao-iniciar {
+  display: block;
+  text-align: center;
+}
+.butao-iniciar button {
+  font-size: 20px;
+  padding: 5px;
+  cursor: pointer;
+}
+.score{
+  font-size: 30px;
+}
+.velocidade {
+  display: flex;
+  align-items: center;
+  gap:10px;
+}
+.timer {
+  display: flex;
+  gap: 10px;
+}
+.velocidade button, .timer button {
+  font-size: 20px;
+  width: 25px;
+  color: red;
+  cursor: pointer;
+}
+.contagem-regressiva {
+  font-size: 20px;
+}
+.butoes-principais {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.modal-screen {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.788);
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  overflow-y: scroll;
+}
+.modal-screen ul {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 5px;
+  /* background-color: aliceblue; */
+  font-size: 18px;
+  text-align: center;
+  margin: 20%;
+}
+.modal-screen  li{
+  margin: 5px;
+  border-bottom: 1px solid aqua;
+}
+.hidden {
+  display: none;
+}
+@media screen and (max-width:550px) {
+  .jogo-area {
+    width: 310px;
+    height: 230px;
+  }
+  .menu {
+    font-size: 11px;
+  }
+  .butao-iniciar button {
+    font-size: 15px;
+  }
+  .velocidade button, .timer button{
+    font-size: 15px;
+  }
+  h1 {
+    font-size:20px ;
+    
+  }
+  .score{
+    font-size: 20px;
+  }
+  .modal-screen ul {
+    font-size: 12px;
+  }
+  img {
+    width: 120px;
+  }
+}
