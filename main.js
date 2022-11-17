@@ -11,6 +11,8 @@ const contagemEl = document.querySelector('[data-contagem="contagem"]')
 const listaTituloEl =document.querySelector('[data-lista="title"]')
 const butaoHistoricoEl = document.querySelector('[data-js="butao-historico"]')
 const modalScreen = document.querySelector('[data-js="modal"]')
+const butaoComoJogar = document.querySelector('[data-js="butao-ajuda"]')
+const modalAjuda = document.querySelector('[data-js="como-jogar"]')
 
 const coresBolinhas = ['white', 'red', 'pink', 'green', 'yellow', 'black', 'gray','purple','orange', 'Teal']
 
@@ -137,17 +139,26 @@ const limparBolhas = () =>{
   const bolhasCriadasEl = document.querySelectorAll('[data-js="bolha"]')
   bolhasCriadasEl.forEach(item => item.remove())
 }
-
+function mostrarHistorico (){
 butaoHistoricoEl.addEventListener('click', e => {
   modalScreen.classList.remove('hidden')
 })
-
+}
 const esconderHistorico = () =>{
   modalScreen.addEventListener('click', e =>{
-    e.target.classList.add('hidden')
+    modalScreen.classList.add('hidden')
   })
 }
-
+const mostrarModalComoJogar = () =>{
+  butaoComoJogar.addEventListener('click', e =>{
+    modalAjuda.classList.remove('hidden')
+  })
+}
+const esconderAjudaComoJogar = () =>{
+  modalAjuda.addEventListener('click', e =>{
+    modalAjuda.classList.add('hidden')
+  })
+}
 // função para o cronometro / cont. regressiva
 function contagemRegressiva (segundos) {
   if(typeof segundos !== 'number'){
@@ -233,6 +244,9 @@ function explodirBolha (){
     }
   })
 }
+mostrarModalComoJogar()
+esconderAjudaComoJogar()
+mostrarHistorico()
 esconderHistorico()
 controlarTimer()
 controlarVelocidade()
