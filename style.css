@@ -129,6 +129,16 @@ main {
     gap: 10px;
   }
 }
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+footer a {
+  width: 20px;
+  margin: 4px;
+}
 @media screen and (max-width:550px) {
   .jogo-area {
     width: 310px;
