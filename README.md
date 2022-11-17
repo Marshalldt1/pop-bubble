@@ -1,6 +1,6 @@
 ## **Pop Bubble**
 
-[Click here for acess site](https://marshalldt1.github.io/jogo-da-memoria/)
+[Click here for acess site](https://marshalldt1.github.io/pop-bubble/)
 
 Welcome :) / 
 Bem vindo :)
