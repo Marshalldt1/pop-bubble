@@ -166,4 +166,7 @@ footer a {
   img {
     width: 120px;
   }
+  footer img {
+    width: 18px;
+  }
 }
