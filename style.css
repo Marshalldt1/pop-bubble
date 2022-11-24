@@ -1,10 +1,11 @@
-*{
-  margin: 0;padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&family=Overpass:wght@400;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
 }
 
-
 main {
-  background-color: aqua;
+  background-color: rgb(157, 255, 255);
   width: 100%;
   height: 100vh;
   display: flex;
@@ -12,7 +13,7 @@ main {
   flex-direction: column;
   justify-content: center;
   gap: 10px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Noto Serif, Helvetica, sans-serif;
 }
 .menu {
   display: flex;
@@ -21,7 +22,7 @@ main {
 }
 .jogo-area {
   position: relative;
-  border: red 1px solid;
+  border: rgb(0, 0, 0) 1px solid;
   width: 500px;
   height: 400px;
 }
@@ -33,6 +34,7 @@ main {
   border-radius: 50%;
   animation-name: nascer;
   animation-duration: 0.2s;
+  cursor: pointer;
 }
 @keyframes nascer {
   from {
@@ -44,35 +46,45 @@ main {
     height: 30px;
   }
 }
-.butao-iniciar {
+.botao-iniciar {
   display: block;
   text-align: center;
 }
-.butao-iniciar button {
+.botao-iniciar button {
   font-size: 16px;
   padding: 5px;
   cursor: pointer;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  background-color: #d73829;
+  border: 1px solid rgba(0, 0, 0, 0.11);
+  transition: all 0.2s;
 }
-.score{
-  font-size: 25px;
+.botao-iniciar button:hover {
+  background-color: white;
+  color: #000000;
+}
+.score {
+  font-size: 23px;
 }
 .velocidade {
   display: flex;
   align-items: center;
-  gap:10px;
+  gap: 10px;
 }
 .timer {
   display: flex;
   gap: 10px;
 }
-.velocidade button, .timer button {
+.velocidade button,
+.timer button {
   font-size: 15px;
-  width: 25px;
-  color: red;
+  width: 23px;
+  color: #d73829;
   cursor: pointer;
 }
 .contagem-regressiva {
-  font-size: 18px;
+  font-size: 15px;
 }
 .butoes-principais {
   display: flex;
@@ -97,18 +109,24 @@ main {
   text-align: center;
   margin: 20%;
 }
-.modal-screen  li{
+.modal-screen li {
   margin: 5px;
-  border-bottom: 1px solid aqua;
+  border-bottom: 1px solid rgb(49, 245, 245);
 }
 .hidden {
   display: none;
 }
-@media screen and (max-height:689px){
-  .butao-iniciar button {
+.ponto-notificacao {
+  position: absolute;
+  color: #d73829;
+  font-size: 20px;
+  z-index: 1;
+}
+@media screen and (max-height: 689px) {
+  .botao-iniciar button {
     font-size: 13px;
   }
-  .score{
+  .score {
     font-size: 20px;
   }
   h1 {
@@ -139,7 +157,7 @@ footer a {
   width: 20px;
   margin: 4px;
 }
-@media screen and (max-width:550px) {
+@media screen and (max-width: 550px) {
   .jogo-area {
     width: 310px;
     height: 230px;
@@ -147,17 +165,17 @@ footer a {
   .menu {
     font-size: 11px;
   }
-  .butao-iniciar button {
+  .botao-iniciar button {
     font-size: 15px;
   }
-  .velocidade button, .timer button{
+  .velocidade button,
+  .timer button {
     font-size: 15px;
   }
   h1 {
-    font-size:20px ;
-    
+    font-size: 20px;
   }
-  .score{
+  .score {
     font-size: 20px;
   }
   .modal-screen ul {
