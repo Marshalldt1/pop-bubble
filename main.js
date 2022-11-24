@@ -26,7 +26,7 @@ const modalAjudaEl = document.querySelector('[data-js="como-jogar"]');
 
 const coresBolhas = [
   'white',
-  'red',
+  'tomato',
   'pink',
   'green',
   'yellow',
