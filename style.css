@@ -28,13 +28,26 @@ main {
 }
 .bolhinha {
   position: absolute;
-  border: 1px solid rgba(255, 255, 255, 0.39);
   width: 35px;
   height: 35px;
   border-radius: 50%;
   animation-name: nascer;
   animation-duration: 0.2s;
   cursor: pointer;
+  box-shadow: -3px 3px 5px rgba(0, 0, 0, 0.336),
+    inset -5px 2px 5px rgba(0, 0, 0, 0.425),
+    inset -2px 2px 10px rgba(255, 255, 255, 0.568);
+}
+.bolhinha::after {
+  content: ' ';
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.137);
+  height: 6px;
+  width: 6px;
+  left: 20px;
+  top: 8px;
+  border-radius: 50%;
+  box-shadow: 1px 7px 0px -1px rgba(255, 255, 255, 0.137);
 }
 @keyframes nascer {
   from {

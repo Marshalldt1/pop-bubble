@@ -30,7 +30,6 @@ const coresBolhas = [
   'pink',
   'green',
   'yellow',
-  'black',
   'gray',
   'purple',
   'orange',
@@ -268,15 +267,15 @@ function controlarBolhas(velocidade) {
 function explodirBolha() {
   const menuJogo = jogoControleTotal;
   areaPrincipalEl.addEventListener('click', e => {
-    const bolhaClidada = e.target;
+    const adicionarPonto = `SCORE: ${(menuJogo.pontos += 1)} pontos`;
     const bolhaContemClassBolhinha = e.target.classList.contains('bolhinha');
     let pontoNotificacao = document.createElement('span');
-    
+    const bolhaClidada = e.target;
+
     pontoNotificacao.textContent = '+1';
     setarMaximoTopLeft(pontoNotificacao, e.clientY - 20, e.clientX - 5);
     pontoNotificacao.classList.add('ponto-notificacao');
 
-    const adicionarPonto = `SCORE: ${(menuJogo.pontos += 1)} pontos`;
     if (bolhaContemClassBolhinha) {
       areaPrincipalEl.insertAdjacentElement('afterend', pontoNotificacao);
       bolhaClidada.remove();
