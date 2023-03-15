@@ -271,7 +271,6 @@ function explodirBolha() {
     const bolhaContemClassBolhinha = e.target.classList.contains('bolhinha');
     let pontoNotificacao = document.createElement('span');
     const bolhaClidada = e.target;
-
     pontoNotificacao.textContent = '+1';
     setarMaximoTopLeft(pontoNotificacao, e.clientY - 20, e.clientX - 5);
     pontoNotificacao.classList.add('ponto-notificacao');
